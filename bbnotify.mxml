@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<mx:WindowedApplication
+    xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+    xmlns:ak33m="http://ak33m.com/mxml"
+    xmlns:local="*"
+    visible="true"
+    showGripper="false"
+    showStatusBar="true"
+    layout="absolute"
+    title="BBNotify"
+    horizontalScrollPolicy="off"
+    verticalScrollPolicy="off"
+    alwaysInFront="true"
+    creationComplete="initApplication()">
+    <fx:Style>
+      @namespace mx "library://ns.adobe.com/flex/mx";
+      
+      mx|WindowedApplication 
+      {
+      background-color: #ffffff;
+      background-alpha: 0.8;
+      }
+    </fx:Style>
+    
+    <mx:VBox percentWidth="100" percentHeight="100">    
+      <local:CustomDataGrid id="dataGrid" x="0" y="0" percentWidth="100" percentHeight="100"
+                           dataProvider="{buildData}"
+                           rowColorFunction="dataGridRowColor"
+                           selectable="false"
+                           itemClick="handleDataGridClickEvent(event);">
+        <local:columns>
+          <mx:DataGridColumn headerText="Build Name" dataField="name"/>
+          <mx:DataGridColumn headerText="Status" dataField="status"/>
+          <mx:DataGridColumn headerText="Revision" dataField="revision"/>
+        </local:columns>
+      </local:CustomDataGrid>
+
+      <mx:ControlBar percentWidth="100">
+        <mx:Button click="showConfig();" label="Configure"/>      
+      </mx:ControlBar>
+    </mx:VBox>
+    
+    <fx:Script source="bbnotify-app.as" />
+</mx:WindowedApplication>

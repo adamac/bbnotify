@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<application xmlns="http://ns.adobe.com/air/application/2.6"> 
+    <id>bbnotify</id> 
+    <versionNumber>0.2</versionNumber> 
+    <filename>bbnotify</filename>
+    <supportedProfiles>desktop extendedDesktop</supportedProfiles>
+    <initialWindow>
+        <content>bbnotify.swf</content>
+        <visible>false</visible>
+        <systemChrome>none</systemChrome> 
+        <transparent>true</transparent> 
+        <width>400</width> 
+        <height>200</height>
+        <minimizable>false</minimizable>
+        <maximizable>false</maximizable>
+        <resizable>false</resizable>
+    </initialWindow> 
+</application>

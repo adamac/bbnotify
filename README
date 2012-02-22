@@ -1,0 +1,6 @@
+To build, run "build.py".
+
+You must have the Adobde AIR SDK and Flex 3 SDK installed and their
+/bin subdirectories must be on your path.
+
+Type the password "dummy", when prompted to build the .air bundle.
